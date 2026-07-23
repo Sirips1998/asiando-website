@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AsianDO</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- =========================================================
+    STICKY NAVBAR
+========================================================= -->
+
+<header class="header">
+    <nav class="navbar">
+
+        <!-- เปลี่ยน Navbar Left ใหม่ ใส่ SVG และเส้นคั่น -->
+        <div class="navbar-left">
+            <div class="nav-left-wrap">
+                
+                <form class="search-box">
+                    <!-- ไอคอนแว่นขยาย -->
+                    <button type="submit">
+                        <img src="images/icon แว่นขยาย.svg" alt="Search">
+                    </button>
+                    
+                    <!-- เส้นคั่นสีขาว -->
+                    <span class="divider"></span>
+                    
+                    <input type="text" placeholder="Search...">
+                    
+                    <!-- ไอคอนไมค์ -->
+                    <button type="button">
+                        <img src="images/icon mic.svg" alt="Mic">
+                    </button>
+                </form>
+
+                <!-- ไอคอนจับมืออยู่นอกกล่อง Search -->
+                <a href="#" class="handshake">
+                    <img src="images/icon 1.svg" alt="Handshake">
+                </a>
+
+            </div>
+        </div>
+
+        <div class="navbar-center">
+            <a href="#">
+                <img src="images/Asian do.png" alt="AsianDO Logo">
+            </a>
+        </div>
+
+<div class="navbar-right">
+            <!-- เปลี่ยนอีโมจิเป็นไฟล์ SVG รถเข็น -->
+            <a href="#" class="cart-icon">
+                <img src="images/icon รถเข็น.svg" alt="Cart">
+            </a>
+<!-- กลุ่มเปลี่ยนภาษา (ปุ่ม + Dropdown) -->
+            <div class="lang-wrapper">
+                <button class="language">
+                    TH <span class="arrow-down"></span>
+                </button>
+                
+                <!-- กล่องเมนูที่ซ่อนอยู่ (จะโผล่ตอนเอาเมาส์ชี้) -->
+                <ul class="dropdown-menu">
+                    <li><a href="#">TH (ไทย)</a></li>
+                    <li><a href="#">EN (English)</a></li>
+                    <li><a href="#">JP (日本語)</a></li>
+                </ul>
+            </div>
+
+    </nav>
+</header>
+
+<!-- =========================================================
+    HERO BANNER
+========================================================= -->
+
+<section class="hero">
+    
+    <!-- สไลด์รูปภาพ -->
+    <div class="hero-slide active" style="background-image: url('images/hero-bg.png');"></div>
+    <div class="hero-slide" style="background-image: url('images/KRS Spicy Food-239.jpg');"></div>
+    <div class="hero-slide" style="background-image: url('images/KRS Spicy Food-132.jpg');"></div>
+    <div class="hero-slide" style="background-image: url('images/KRS Spicy Food-194.jpg');"></div>
+
+    <!-- ฟิลเตอร์ดำไล่ขอบ (Overlay) -->
+    <div class="hero-overlay"></div>
+
+    <!-- คอนเทนต์ข้อความ (อยู่เหนือฟิลเตอร์) -->
+    <div class="hero-content">
+        <h1>
+            Asian Do
+        </h1>
+        <p>
+            Asian Street Food
+        </p>
+        <a href="#menu" class="btn-primary">
+            View Our Menu
+        </a>
+    </div>
+
+    <!-- ปุ่มขีดๆ เลื่อนสไลด์ (Indicators) -->
+    <div class="slider-indicators">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+
+</section>
+
+<!-- =========================================================
+    BRAND STORY
+========================================================= -->
+
+<section class="brand-story">
+    <div class="container">
+<!-- ฝั่งซ้าย: ข้อความ -->
+        <div class="story-text">
+            <h2>BRAND<br>STORY</h2>
+<p>
+                AsianDO Brand Logo has represented<br>
+                "Easy Asian cuisine", Asian DO brand<br>
+                seeks to offer products to people to<br>
+                cook Asian cuisine at home including<br>
+                Chinese, Japanese, Korean,<br>
+                Thai and Indian...
+            </p>            <a href="#">เกี่ยวกับเรา ➝</a>
+        </div>
+
+        <!-- ฝั่งขวา: รูปร้านอาหาร (ถ้าเปลี่ยนเป็น JPG แล้วอย่าลืมแก้ .svg เป็น .jpg ด้วยนะ) -->
+        <div class="story-image">
+            <img src="images/img1.png" alt="Asian Do Restaurant">
+        </div>
+
+    </div>
+</section>
+
+<!-- =========================================================
+    BRAND CONCEPT
+========================================================= -->
+
+<section class="brand-concept">
+    <div class="container">
+        
+        <!-- ฝั่งซ้าย: โลโก้ -->
+        <div class="concept-logo">
+            <!-- ⚠️ แอบเตือน: ชื่อไฟล์แกมีเว้นวรรค (Asian do.png) ระวังเบราว์เซอร์บางตัวหาไม่เจอนะ 
+                 ถ้าให้ชัวร์สุด แนะนำให้เปลี่ยนชื่อไฟล์ในคอมเป็น Asian-do.png แล้วมาแก้โค้ดบรรทัดล่างนี้ด้วย แต่ถ้าเทสแล้วรูปขึ้นก็ปล่อยผ่านได้เลย! -->
+            <img src="images/Asian do.png" alt="Asian Do Concept Logo">
+        </div>
+
+        <!-- ฝั่งขวา: ข้อความ -->
+        <div class="concept-content">
+            <h2>BRAND<br>CONCEPT</h2>
+            <ul>
+                <li>
+                    Asian Street Food<br>
+                    <span style="font-size: 16px; font-weight: 400; color: #555;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+                </li>
+                <li>
+                    Fresh Ingredients<br>
+                    <span style="font-size: 16px; font-weight: 400; color: #555;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+                </li>
+                <li>
+                    Fast and convenient<br>
+                    <span style="font-size: 16px; font-weight: 400; color: #555;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+                </li>
+                <li>
+                    Premium<br>
+                    <span style="font-size: 16px; font-weight: 400; color: #555;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+
+<!--====================================================
+    PRODUCT CATEGORIES
+====================================================-->
+<section class="categories">
+    <!-- 🔴 วงกลมสีแดง (ล่างสุด) -->
+    <div class="categories-circle-bg"></div>
+    
+    <!-- 🌸 ดอกไม้.svg พาดทับวงกลมแดง (ชั้นกลาง) -->
+    <img src="images/ดอกไม้.svg" alt="Flower Decoration" class="categories-flower">
+
+    <!-- 📦 คอนเทนเนอร์เนื้อหา (บนสุด) -->
+    <div class="container" style="position: relative; z-index: 2;">
+        
+        <!-- หัวข้อฝั่งซ้าย + Dropdown -->
+        <div class="categories-header">
+            <h2>CATEGORIES</h2>
+            <div class="cuisine-select-wrap">
+                <select class="cuisine-select">
+                    <option>Select Cuisine</option>
+                    <option>Thai</option>
+                    <option>Japanese</option>
+                    <option>Korean</option>
+                    <option>Chinese</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- กริดการ์ดไอคอน 4 ช่อง -->
+        <div class="category-grid">
+            
+            <!-- Card 1 -->
+            <div class="category-card">
+                <img src="images/icon cooking.svg" alt="Cooking Sauces">
+                <h4>Cooking<br>Sauces</h4>
+                <p>Stir Fry Sauces</p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="category-card">
+                <img src="images/icon Packaged.svg" alt="Packaged Meal">
+                <h4>Packaged<br>Meal</h4>
+                <p>Meal Kit, Cooking Kit</p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="category-card">
+                <img src="images/icon Noodles.svg" alt="Noodles">
+                <h4><br>Noodles</h4> <!-- เคาะ br ให้อยู่บรรทัดเดียวกับเพื่อน -->
+                <p>Udon, Ramen, Chinese Noodles</p>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="category-card">
+                <img src="images/icon ingredients.svg" alt="Cooking Ingredients">
+                <h4>Cooking<br>Ingredients</h4>
+                <p>Pickled, Condiment, Crispy Chilli in Oil</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- =========================================================
+    ALL PRODUCTS (อัปเดตใหม่ตามเรฟ Ai)
+========================================================= -->
+<section class="products">
+    <div class="container">
+      
+      <!-- ก้อน Header: หัวข้อ + ตัวกรอง + ค้นหา -->
+      <div class="products-top">
+        <h2>PRODUCTS</h2>
+        <div class="products-controls">
+          
+          <div class="filter-wrap">
+            <select class="product-filter">
+              <option>Packaging Type</option>
+            </select>
+          </div>
+  
+          <div class="search-wrap">
+            <button type="button"><img src="images/icon แว่นขยาย.svg" alt="Search"></button>
+            <input type="text" placeholder="Search...">
+          </div>
+  
+        </div>
+      </div>
+  
+      <!-- ก้อน Grid สินค้า -->
+      <div class="product-grid">
+        
+        <!-- Card 1 -->
+        <div class="product-card">
+          <img src="images/Crunchy Chilli Gralic.png" alt="Crunchy Chilli Garlic">
+          <span class="category-pill">Cooking Ingredients</span>
+          <h3>Crunchy Chilli Garlic</h3>
+          <p class="weight">100g</p>
+        </div>
+        
+        <!-- Card 2 -->
+        <div class="product-card">
+          <img src="images/Crunchy Chilli Onion.png" alt="Crunchy Chilli Onion">
+          <span class="category-pill">Cooking Ingredients</span>
+          <h3>Crunchy Chilli Onion</h3>
+          <p class="weight">100g</p>
+        </div>
+  
+        <!-- Card 3 -->
+        <div class="product-card">
+          <img src="images/Crunchy Garlic in Oil.png" alt="Crunchy Garlic in Oil with Sichuan Pepper">
+          <span class="category-pill">Cooking Ingredients</span>
+          <h3>Crunchy Garlic in Oil<br>with Sichuan Pepper</h3>
+          <p class="weight">100g</p>
+        </div>
+  
+        <!-- Card 4 -->
+        <div class="product-card">
+          <img src="images/Crunchy Garlic in Oil with Tom Yum Spices.png" alt="Crunchy Garlic in Oil with Tom Yum Spices">
+          <span class="category-pill">Cooking Ingredients</span>
+          <h3>Crunchy Garlic in Oil<br>with Tom Yum Spices</h3>
+          <p class="weight">100g</p>
+        </div>
+  
+      </div>
+  
+      <!-- ก้อนปุ่มด้านล่าง -->
+      <div class="products-bottom">
+        <a href="#" class="btn-all">ALL PRODUCT ➔</a>
+      </div>
+  
+    </div>
+  </section>
+
+<!-- =========================================================
+    EASY ASIAN MEALS (อัปเดตใหม่ตามเรฟ Ai)
+========================================================= -->
+
+<section class="easy-meals">
+
+    <!-- 🏮 รูปลอยตกแต่งมุมขวาบน (แกอย่าลืม Save ไฟล์โคมไฟจาก Ai มาใส่ตรงนี้นะ!) -->
+    <img src="images/img3.png" alt="Lantern Decoration" class="lantern-deco">
+
+    <div class="container">
+
+        <!-- ก้อน Header และ Dropdown สีเหลือง -->
+        <div class="easy-meals-header">
+            <h2>EASY ASIAN MEALS</h2>
+            <div class="yellow-select-wrap">
+                <select class="yellow-select">
+                    <option>Select Cuisine</option>
+                    <option>Korean</option>
+                    <option>Thai</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- ก้อน Grid สินค้า -->
+        <div class="meal-grid">
+
+            <!-- Card 1 -->
+            <div class="meal-card">
+                <!-- ⚠️ เปลี่ยนชื่อไฟล์รูปภาพให้ตรงกับที่แกเซฟมาด้วยนะ -->
+                <img src="images/Jajangmyeon.png" alt="Jajangmyeon">
+                <div class="meal-info">
+                    <span class="meal-pill">Quick Noodle Bowls</span>
+                    <h3>Jajangmyeon</h3>
+                    <p>Noodle Bowl</p>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="meal-card">
+                <img src="images/Crab Curry.png" alt="Crab Curry">
+                <div class="meal-info">
+                    <span class="meal-pill">Quick Noodle Bowls</span>
+                    <h3>Crab Curry</h3>
+                    <p>Noodle Bowl</p>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="meal-card">
+                <img src="images/Pad Thai.png" alt="Pad Thai">
+                <div class="meal-info">
+                    <span class="meal-pill">Quick Noodle Bowls</span>
+                    <h3>Pad Thai</h3>
+                    <p>Noodle Bowl</p>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="meal-card">
+                <img src="images/Tom Yum.png" alt="Tom Yum">
+                <div class="meal-info">
+                    <span class="meal-pill">Quick Noodle Bowls</span>
+                    <h3>Tom Yum</h3>
+                    <p>Noodle Bowl</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ปุ่ม VIEW ALL ขวาล่าง -->
+        <div class="easy-meals-bottom">
+            <a href="#" class="btn-yellow-outline">VIEW ALL ➔</a>
+        </div>
+
+    </div>
+</section>
+
+<!-- =========================================================
+    OUR COMMITMENT (อัปเดตใหม่ สไลเดอร์ + เรฟ Ai)
+========================================================= -->
+
+<section class="commitment">
+    <div class="container">
+        
+        <!-- ❌ ลบปุ่ม VIEW ALL ที่เคยอยู่ตรงนี้ออกไปแล้ว เพื่อไม่ให้ตีกับ Section ด้านบน -->
+
+        <!-- กล่องหลัก ซ้าย-ขวา -->
+        <div class="commitment-wrapper">
+            
+            <!-- ฝั่งซ้าย: ข้อความ + ลายน้ำ -->
+           <div class="commitment-content">
+                
+                <!-- ⚠️ เติมรูป img4.png ตรงนี้! -->
+                <img src="images/img4.png" alt="Decoration" class="commitment-deco">
+                
+                <div class="commitment-text-inner">
+                    <h2>OUR<br>COMMITMENT</h2>
+                    <p>
+                        "Lorem ipsum dolor sit amet, consectetur<br>
+                        adipiscing elit. Sed do eiusmod tempor<br>
+                        incididunt ut labore et dolore magna aliqua."
+                    </p>
+                    <a href="#" class="btn-red">Our Standards ➔</a>
+                </div>
+            </div>
+
+            <!-- ฝั่งขวา: สไลเดอร์รูปภาพ -->
+            <div class="commitment-slider">
+                
+                <!-- ⚠️ ลองเปลี่ยนเป็น .png ดู ถ้ารูปยังไม่ขึ้นแสดงว่าไฟล์แกคือ .jpg นะ (แก้ .png เป็น .jpg ได้เลย) -->
+                <div class="slide active"><img src="images/img5.png" alt="Farm 1"></div>
+                <div class="slide"><img src="images/img6.jpg" alt="Farm 2"></div>
+                <div class="slide"><img src="images/img7.jpg" alt="Farm 3"></div>
+                <div class="slide"><img src="images/img8.jpg" alt="Farm 4"></div>
+                <div class="slide"><img src="images/img9.jpg" alt="Farm 5"></div>
+
+                <!-- ฟิลเตอร์ไล่สีดำด้านล่าง -->
+                <div class="slider-gradient"></div>
+
+                <!-- ปุ่มจุดสไลด์ทรงแคปซูล -->
+                <div class="commitment-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- =========================================================
+    FOOTER (อัปเดตล่าสุดตามเรฟ Ai)
+========================================================= -->
+<footer>
+    <div class="container">
+        
+        <!-- คอลัมน์ 1: โลโก้และเกี่ยวกับเรา -->
+        <div class="footer-column">
+            <h3>เกี่ยวกับ Asian do</h3>
+            <!-- โลโก้ -->
+            <img src="images/Asian do.png" alt="AsianDO Logo" class="footer-logo">
+            <ul>
+                <li><a href="#">เกี่ยวกับเรา</a></li>
+                <li><a href="#">คุณภาพและความใส่ใจของเรา</a></li>
+            </ul>
+        </div>
+
+        <!-- คอลัมน์ 2: สินค้า -->
+        <div class="footer-column">
+            <h3>สินค้า</h3>
+            <ul>
+                <li><a href="#">หมวดหมู่สินค้า</a></li>
+                <li><a href="#">สินค้าทั้งหมด</a></li>
+                <li><a href="#">ไอเดียมื้ออร่อย (Easy Asian Meals)</a></li>
+            </ul>
+        </div>
+
+        <!-- คอลัมน์ 3: บริการและช่วยเหลือ -->
+        <div class="footer-column">
+            <h3>บริการและช่วยเหลือ</h3>
+            <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">นโยบายความเป็นส่วนตัว</a></li>
+                <li><a href="#">เงื่อนไขการใช้งาน</a></li>
+            </ul>
+        </div>
+
+<!-- คอลัมน์ 4: ติดต่อเรา -->
+<div class="footer-column">
+            <h3>ติดต่อเรา</h3>
+            <h4>ที่อยู่</h4>
+            <address>
+                19/8 Moo 1, Khlong Sam,<br>
+                Khlong Luang, Pathum Thani<br>
+                12120, Thailand
+            </address>
+            
+            <div class="contact-info">
+                <!-- แก้ชื่อไฟล์ใช้ขีดกลางแทนเว้นวรรค -->
+                <p><img src="images/icon call.png" alt="Phone" class="contact-icon"> +66 2 569 6317-9</p>
+                <p><img src="images/icon mail.png" alt="Email" class="contact-icon"> info@krsspicyfood.com</p>
+            </div>
+            
+            <div class="social-links">
+                <!-- แก้ชื่อไฟล์ใช้ขีดกลางแทนเว้นวรรค -->
+                <a href="#"><img src="images/icon facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="images/icon tiktok.png" alt="TikTok"></a>
+                <a href="#"><img src="images/icon IG.png" alt="Instagram"></a>
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>

@@ -10,6 +10,7 @@
 
 html{
     scroll-behavior:smooth;
+    scroll-padding-top: 90px; /* ✨ เพิ่มชดเชยความสูง Navbar เวลากดลิงก์จะได้ไม่โดนบังหัวข้อ */
 }
 
 body{
@@ -102,11 +103,36 @@ input{
     height: 82px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     position: relative;
     width: 92%;
     max-width: 1400px; 
     margin: 0 auto; 
+}
+
+/*====================================================
+    LAYOUT ซ้าย-กลาง-ขวา (จัดสมมาตร)
+====================================================*/
+
+.navbar-left, .navbar-right {
+    display: flex;
+    align-items: center;
+    flex: 1; /* บังคับให้พื้นที่ซ้าย-ขวาเท่ากัน โลโก้จะอยู่ตรงกลางจอ */
+}
+
+/* ฝั่งซ้าย: ถีบ Search ไปชิดซ้ายสุด และดึงเมนูเข้าหาโลโก้ */
+.navbar-left {
+    justify-content: space-between; 
+}
+
+/* ฝั่งขวา: ถีบรถเข็นไปขวาสุด */
+.navbar-right {
+    justify-content: flex-end; 
+    gap: 30px; 
+}
+
+/* ผลักเมนูฝั่งขวา ให้เข้ามาใกล้โลโก้ */
+.navbar-right .nav-menu {
+    margin-right: auto; 
 }
 
 /*====================================================
@@ -181,33 +207,50 @@ input{
 }
 
 /*====================================================
-    LOGO
+    LOGO CENTER
 ====================================================*/
 
 .navbar-center {
-    position: absolute;
-    left: 50%;
-    top: 50%; 
-    transform: translate(-50%, -50%); 
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
+    margin: 0 45px; /* ระยะห่างระหว่าง โลโก้ กับ ตัวหนังสือเมนู ปรับตรงนี้ได้เลย */
 }
 
 .navbar-center img {
     width: 120px; 
     transition: 0.3s ease; 
+    transform: translateY(-4px); /* ชดเชยหางโลโก้ ดันให้บาลานซ์กับตัวหนังสือเมนู */
 }
 
 /*====================================================
-    RIGHT
+    MENU LINKS (BRAND STORY, PRODUCT, etc.)
 ====================================================*/
 
-.navbar-right {
+.nav-menu {
     display: flex;
     align-items: center;
-    gap: 30px; 
+    gap: 30px; /* ระยะห่างระหว่างคำแต่ละคำ */
 }
+
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600; 
+    letter-spacing: 0.5px;
+    white-space: nowrap; 
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: #FFD700; 
+}
+
+/*====================================================
+    RIGHT ICONS & LANGUAGE
+====================================================*/
 
 .cart-icon img {
     width: 26px; 
@@ -350,7 +393,7 @@ input{
     right: 15%; 
     left: auto;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(0%);
     color: #fff;
     z-index: 5;
     display: flex;
@@ -368,11 +411,11 @@ input{
 }
 
 .hero p {
-    margin-top: 15px;
-    font-size: 38px; 
+    margin-top: -5px;
+    font-size: 50px; 
     font-style: italic; 
     font-weight: 700;
-    margin-bottom: 35px; 
+    margin-bottom: 10px; 
     text-shadow: 0 5px 18px rgba(0,0,0,0.5);
 }
 
@@ -421,6 +464,19 @@ input{
 
 .dot.active {
     background: #fff; 
+}
+/*====================================================
+    แก้บั๊กเมนูฝั่งขวา ให้วิ่งเข้าหาโลโก้
+====================================================*/
+
+/* 1. ดึงของฝั่งขวาทั้งหมดให้มาเริ่มชิดซ้าย (เข้าหาโลโก้ตรงกลาง) */
+.navbar-right {
+    justify-content: flex-start !important; 
+}
+
+/* 2. สั่ง "ถีบ" เฉพาะไอคอนรถเข็น (และตัวเปลี่ยนภาษาที่อยู่ต่อจากมัน) ให้กระเด็นไปชิดขอบขวาสุด */
+.cart-icon {
+    margin-left: auto; 
 }
 
 /*====================================================
@@ -719,7 +775,29 @@ input{
 .category-card:hover {
     transform: translateY(-12px);
 }
+/*====================================================
+    เอฟเฟกต์การ์ดหมวดหมู่ ตอนเอาเมาส์ชี้ (Hover)
+====================================================*/
 
+.category-card:hover {
+    transform: translateY(-12px); /* ของเดิมที่ทำให้การ์ดเด้งลอยขึ้น (ไม่ลบจ้า) */
+    
+    /* 👈 🎨 จุดที่ 1: เปลี่ยนสีพื้นหลังการ์ดตรงนี้เลย! */
+    /* ตอนนี้ใส่สีเหลืองแบรนด์ #F4CF18 ไว้ ไอคอนแดงจะได้ไม่จม */
+    background: #F4CF18; 
+}
+
+/* ก้อนนี้เพิ่มใหม่! เพื่อเปลี่ยนสีตัวหนังสือตอนเอาเมาส์ชี้ จะได้ไม่โดนกลืน */
+.category-card:hover h4,
+.category-card:hover p {
+    
+    /* 👈 🎨 จุดที่ 2: เปลี่ยนสีตัวหนังสือตรงนี้ฮะ! */
+    /* ตอนนี้ใส่สีดำเข้ม #1F1F1F เพื่อให้ตัดกับพื้นหลังเหลือง */
+    color: #1F1F1F; 
+}
+
+/* (Option เสริม) ถ้าอยากให้แถบสีแดงด้านล่างการ์ด เปลี่ยนสีตามไปด้วย เอาคอมเมนต์บรรทัดล่างออกฮะ */
+/* .category-card:hover::after { background: #1F1F1F; } */
 .category-card img {
     height: 85px; 
     width: auto;
@@ -819,6 +897,32 @@ input{
     border-right: 1.5px solid #222;
     border-bottom: 1.5px solid #222;
     pointer-events: none;
+}
+
+/*====================================================
+    เอฟเฟกต์การ์ด PRODUCTS ตอนเอาเมาส์ชี้ (Hover)
+====================================================*/
+
+.product-card:hover {
+    transform: translateY(-10px); /* ของเดิมที่ทำให้การ์ดเด้งลอยขึ้น */
+    box-shadow: 0 25px 45px rgba(0,0,0,.12); /* ของเดิม */
+    
+    /* 👈 🎨 จุดที่ 1: เปลี่ยนสีพื้นหลังการ์ด PRODUCTS ตรงนี้! */
+    /* ตอนนี้ใส่สีแดงแบรนด์ไว้ */
+    background: #b11116; 
+}
+
+/* 👈 🎨 จุดที่ 2: เปลี่ยนสีตัวหนังสือ (ชื่อสินค้า & น้ำหนัก) */
+.product-card:hover h3,
+.product-card:hover .weight {
+    /* เปลี่ยนเป็นสีขาว เพื่อให้สว่างทะลุพื้นหลังแดงขึ้นมา */
+    color: #ffffff; 
+}
+
+/* 👈 🎨 จุดที่ 3: เปลี่ยนสี "ป้ายกรอบหมวดหมู่" (Cooking Ingredients) */
+.product-card:hover .category-pill {
+    color: #ffffff; /* เปลี่ยนสีตัวหนังสือในป้าย */
+    border-color: rgba(255, 255, 255, 0.5); /* เปลี่ยนสีเส้นขอบป้ายให้เป็นขาวจางๆ */
 }
 
 /* กล่อง Search */
@@ -1473,4 +1577,17 @@ footer .container {
     .footer-column ul li:hover {
         transform: none;
     }
+}
+/*====================================================
+    ปรับขนาดปุ่มแดงทุกปุ่มให้มินิมอลเท่ากับปุ่ม ALL PRODUCT
+====================================================*/
+.btn-primary, 
+.story-text a, 
+.btn-red {
+    width: auto !important;
+    height: auto !important;
+    padding: 12px 25px !important;
+    font-size: 14px !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.5px;
 }

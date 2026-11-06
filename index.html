@@ -30,10 +30,32 @@
                 <input type="text" placeholder="Search...">
                 <button type="button"><img src="images/icon mic.svg" alt="Mic"></button>
             </form>
-            <a href="th/partner/index.html" class="handshake" title="Partner With Us"><img src="images/icon 1.svg" alt="Partner With Us"></a>
+            <div class="nav-item">
+                <a href="th/contact/index.html" class="handshake" title="Contact"><img src="images/icon 1.svg" alt="Contact"></a>
+                <div class="nav-sub">
+                    <a href="th/contact/index.html">Contact Us</a>
+                    <a href="th/partner/index.html">Partner With Us</a>
+                    <a href="th/faq/index.html">FAQs</a>
+                </div>
+            </div>
         </div>
-        <a href="th/brand-story/index.html" class="nav-link">BRAND STORY</a>
-        <a href="th/products/index.html" class="nav-link">PRODUCT</a>
+        <div class="nav-item">
+            <a href="th/brand-story/index.html" class="nav-link">BRAND STORY</a>
+            <div class="nav-sub">
+                <a href="th/brand-story/index.html">Our Story</a>
+                <a href="th/brand-story/concept/index.html">Brand Concept</a>
+            </div>
+        </div>
+        <div class="nav-item">
+            <a href="th/products/index.html" class="nav-link">PRODUCT</a>
+            <div class="nav-sub">
+                <a href="th/products/index.html">All Products</a>
+                <a href="th/products/category/cooking-sauces/index.html">Cooking Sauces</a>
+                <a href="th/products/category/packaged-meal/index.html">Packaged Meal</a>
+                <a href="th/products/category/noodles/index.html">Noodles</a>
+                <a href="th/products/category/cooking-ingredients/index.html">Cooking Ingredients</a>
+            </div>
+        </div>
     </div>
     <div class="navbar-center">
         <a href="th/index.html">
@@ -41,8 +63,23 @@
         </a>
     </div>
     <div class="navbar-right">
-        <a href="th/meals/index.html" class="nav-link">EASY ASIAN MEALS</a>
-        <a href="th/commitment/index.html" class="nav-link">OUR COMMITMENT</a>
+        <div class="nav-item">
+            <a href="th/meals/index.html" class="nav-link">EASY ASIAN MEALS</a>
+            <div class="nav-sub">
+                <a href="th/meals/index.html">All Meal Ideas</a>
+                <a href="th/meals/category/quick-noodle-bowls/index.html">Quick Noodle Bowls</a>
+                <a href="th/meals/category/crunchy-creations/index.html">Crunchy Creations</a>
+                <a href="th/meals/category/asian-street-food-at-home/index.html">Asian Street Food at Home</a>
+                <a href="th/blogs/index.html">Blogs / Tips</a>
+            </div>
+        </div>
+        <div class="nav-item">
+            <a href="th/commitment/index.html" class="nav-link">OUR COMMITMENT</a>
+            <div class="nav-sub">
+                <a href="th/commitment/index.html">Standards &amp; Sustainability</a>
+                <a href="th/commitment/behind-the-scenes/index.html">Behind the Scenes</a>
+            </div>
+        </div>
         <a href="https://krsshopping.com" target="_blank" rel="noopener" class="cart-icon"><img src="images/icon รถเข็น.svg" alt="Cart"></a>
         <div class="lang-wrapper">
             <button class="language">TH <span class="arrow-down"></span></button>
@@ -73,15 +110,13 @@
 
     <!-- คอนเทนต์ข้อความ (อยู่เหนือฟิลเตอร์) -->
     <div class="hero-content">
-        <h1>
-            Asian Do
-        </h1>
-        <p>
-            Asian Street food
-        </p>
-        <a href="th/products/index.html" class="btn-primary">
-            View our menu
-        </a>
+        <span class="hero-eyebrow">WELCOME TO ASIANDO</span>
+        <h1>Asian Street Food.<br>Made Easy.</h1>
+        <p class="hero-desc">From the energy of Asian street food to the comfort of your own kitchen. Discover AsianDO sauces, noodles, ingredients and ideas for effortless meals.</p>
+        <div class="hero-actions">
+            <a href="th/products/index.html" class="btn-primary">Products</a>
+            <a href="th/meals/index.html" class="btn-outline-w">Meal Ideas</a>
+        </div>
     </div>
 
     <!-- ปุ่มขีดๆ เลื่อนสไลด์ (Indicators) -->
@@ -138,7 +173,9 @@
         
         <!-- หัวข้อฝั่งซ้าย + Dropdown -->
         <div class="categories-header">
-            <h2>CATEGORIES</h2>
+            <span class="sec-eyebrow">02 / EXPLORE</span>
+            <h2>PRODUCT CATEGORIES</h2>
+            <p class="sec-sub">Find the ingredients and formats to match your kitchen.</p>
             <div class="cuisine-select-wrap">
                 <select class="cuisine-select">
                     <option>Select Cuisine</option>
@@ -157,28 +194,28 @@
             <a class="category-card" href="th/products/category/cooking-sauces/index.html">
                 <img src="images/icon cooking.svg" alt="Cooking Sauces">
                 <h4>Cooking<br>Sauces</h4>
-                <p>Stir Fry Sauces</p>
+                <p>Sauces for convenient everyday Asian cooking. Explore flavours and meal combinations.</p>
             </a>
 
             <!-- Card 2 -->
             <a class="category-card" href="th/products/category/packaged-meal/index.html">
                 <img src="images/icon Packaged.svg" alt="Packaged Meal">
                 <h4>Packaged<br>Meal</h4>
-                <p>Meal Kit, Cooking Kit</p>
+                <p>Meal kits and cooking kits designed to simplify meal preparation.</p>
             </a>
 
             <!-- Card 3 -->
             <a class="category-card" href="th/products/category/noodles/index.html">
                 <img src="images/icon Noodles.svg" alt="Noodles">
                 <h4><br>Noodles</h4> <!-- เคาะ br ให้อยู่บรรทัดเดียวกับเพื่อน -->
-                <p>Udon, Ramen, Chinese Noodles</p>
+                <p>A noodle-focused range for ramen, udon and other Asian-style dishes.</p>
             </a>
 
             <!-- Card 4 -->
             <a class="category-card" href="th/products/category/cooking-ingredients/index.html">
                 <img src="images/icon ingredients.svg" alt="Cooking Ingredients">
                 <h4>Cooking<br>Ingredients</h4>
-                <p>Pickled, Condiment, Crispy Chilli in Oil</p>
+                <p>Condiments, crispy chilli and aromatic toppings that complement everyday meals.</p>
             </a>
 
         </div>
@@ -193,7 +230,9 @@
       
       <!-- ก้อน Header: หัวข้อ + ตัวกรอง + ค้นหา -->
       <div class="products-top">
-        <h2>PRODUCTS</h2>
+        <span class="sec-eyebrow">PRODUCT DISCOVERY</span>
+        <h2>FEATURED PRODUCTS</h2>
+        <p class="sec-sub">Explore the current AsianDO product examples and their dedicated detail pages.</p>
         <div class="products-controls">
           
           <div class="filter-wrap">
@@ -268,7 +307,9 @@
 
         <!-- ก้อน Header และ Dropdown สีเหลือง -->
         <div class="easy-meals-header">
+            <span class="sec-eyebrow">03 / INSPIRATION</span>
             <h2>EASY ASIAN MEALS</h2>
+            <p class="sec-sub">Quick noodle bowls, crunchy toppings and familiar street-food favourites.</p>
             <div class="yellow-select-wrap">
                 <select class="yellow-select">
                     <option>Select Cuisine</option>
@@ -287,7 +328,7 @@
                 <div class="meal-info">
                     <span class="meal-pill">Quick Noodle Bowls</span>
                     <h3>Jajangmyeon</h3>
-                    <p>Noodle Bowl</p>
+                    <p>15–20 min • Recipe inspiration</p>
                 </div></a>
 
             <!-- Card 2 -->
@@ -296,7 +337,7 @@
                 <div class="meal-info">
                     <span class="meal-pill">Quick Noodle Bowls</span>
                     <h3>Crab Curry</h3>
-                    <p>Noodle Bowl</p>
+                    <p>20–25 min • Recipe inspiration</p>
                 </div></a>
 
             <!-- Card 3 -->
@@ -305,7 +346,7 @@
                 <div class="meal-info">
                     <span class="meal-pill">Quick Noodle Bowls</span>
                     <h3>Pad Thai</h3>
-                    <p>Noodle Bowl</p>
+                    <p>15–20 min • Recipe inspiration</p>
                 </div></a>
 
             <!-- Card 4 -->
@@ -314,7 +355,7 @@
                 <div class="meal-info">
                     <span class="meal-pill">Quick Noodle Bowls</span>
                     <h3>Tom Yum</h3>
-                    <p>Noodle Bowl</p>
+                    <p>15–20 min • Recipe inspiration</p>
                 </div></a>
 
         </div>
@@ -344,11 +385,7 @@
                 
                 <div class="commitment-text-inner">
                     <h2>OUR<br>COMMITMENT</h2>
-                    <p>
-                        "Lorem ipsum dolor sit amet, consectetur<br>
-                        adipiscing elit. Sed do eiusmod tempor<br>
-                        incididunt ut labore et dolore magna aliqua."
-                    </p>
+                    <p>Care in every step. Learn about AsianDO’s approach to ingredient selection, quality processes and social responsibility.</p>
                     <a href="th/commitment/index.html" class="btn-red">Our Standards ➔</a>
                 </div>
             </div>
@@ -381,6 +418,23 @@
     </div>
 </section>
 
+
+<!-- =========================================================
+    PARTNER WITH US
+========================================================= -->
+<section class="partner-band" id="partner">
+    <div class="container">
+        <div class="pb-box">
+            <div>
+                <span class="sec-eyebrow">LET’S CONNECT</span>
+                <h2>Partner With AsianDO</h2>
+                <p>Interested in distribution, partnership or product enquiries?</p>
+            </div>
+            <a href="th/partner/index.html" class="btn-red">Get in Touch ➔</a>
+        </div>
+    </div>
+</section>
+
 <!-- =========================================================
     FOOTER
 ========================================================= -->
@@ -389,17 +443,20 @@
         <div class="footer-column">
             <h3>เกี่ยวกับ Asian do</h3>
             <img src="images/Asian do.png" alt="AsianDO Logo" class="footer-logo">
+            <p class="footer-tag">Asian street food, made easy at home.</p>
             <ul>
                 <li><a href="th/brand-story/index.html">เกี่ยวกับเรา</a></li>
+                <li><a href="th/brand-story/concept/index.html">แนวคิดแบรนด์ (Brand Concept)</a></li>
                 <li><a href="th/commitment/index.html">คุณภาพและความใส่ใจของเรา</a></li>
             </ul>
         </div>
         <div class="footer-column">
-            <h3>สินค้า</h3>
+            <h3>สินค้าและแรงบันดาลใจ</h3>
             <ul>
                 <li><a href="th/products/index.html">หมวดหมู่สินค้า</a></li>
                 <li><a href="th/products/index.html">สินค้าทั้งหมด</a></li>
                 <li><a href="th/meals/index.html">ไอเดียมื้ออร่อย (Easy Asian Meals)</a></li>
+                <li><a href="th/blogs/index.html">บทความ / เคล็ดลับ</a></li>
             </ul>
         </div>
         <div class="footer-column">
@@ -408,6 +465,7 @@
                 <li><a href="th/faq/index.html">FAQ</a></li>
                 <li><a href="th/privacy/index.html">นโยบายความเป็นส่วนตัว</a></li>
                 <li><a href="th/terms/index.html">เงื่อนไขการใช้งาน</a></li>
+                <li><a href="th/partner/index.html">ร่วมเป็นพันธมิตร</a></li>
             </ul>
         </div>
         <div class="footer-column">
@@ -421,6 +479,7 @@
             <div class="contact-info">
                 <p><img src="images/icon call.png" alt="Phone" class="contact-icon"> <a href="tel:+6625696317">+66 2 569 6317-9</a></p>
                 <p><img src="images/icon mail.png" alt="Email" class="contact-icon"> <a href="mailto:info@krsspicyfood.com">info@krsspicyfood.com</a></p>
+                <p><a href="https://krsshopping.com" target="_blank" rel="noopener">Shop via KRSS Shopping ↗</a></p>
             </div>
             <div class="social-links">
                 <a href="#"><img src="images/icon facebook.png" alt="Facebook"></a>
@@ -428,6 +487,7 @@
                 <a href="#"><img src="images/icon IG.png" alt="Instagram"></a>
             </div>
         </div>
+        <div class="footer-bottom">© 2026 AsianDO. Asian street food, made easy.</div>
     </div>
 </footer>
 

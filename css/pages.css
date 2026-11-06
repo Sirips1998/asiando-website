@@ -1,0 +1,389 @@
+/*====================================================
+    PAGES.CSS — หน้าด้านใน (en/ th/)
+    ใช้ดีไซน์/สี/ฟอนต์/มุมโค้งของเว็บหลัก (style.css)
+====================================================*/
+
+body.inner{
+    background:#EBEBEB;
+    font-family:'Montserrat','Noto Sans Thai',sans-serif;
+}
+
+/* ---------- HERO ของหน้าด้านใน ---------- */
+.page-hero{
+    background:var(--dark);
+    color:#fff;
+    padding:190px 0 140px;
+    position:relative;
+    overflow:hidden;
+}
+.page-hero::before{
+    content:"";
+    position:absolute;
+    top:-140px;
+    right:-120px;
+    width:520px;
+    height:520px;
+    border-radius:50%;
+    background:#9a0e11;
+    opacity:.85;
+}
+.page-hero .container{
+    position:relative;
+    z-index:2;
+    width:92%;
+    max-width:1400px;
+}
+.bread{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    font-size:13px;
+    color:#bbb;
+    margin-bottom:22px;
+}
+.bread a{color:var(--yellow)}
+.bread a:hover{text-decoration:underline}
+.page-hero .eyebrow{
+    display:block;
+    color:var(--yellow);
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:3px;
+}
+.page-title{
+    font-size:64px;
+    font-weight:800;
+    line-height:1.1;
+    margin:12px 0 18px;
+    color:#fff;
+}
+.page-hero p{
+    font-size:18px;
+    line-height:1.7;
+    color:#ddd;
+    max-width:780px;
+}
+
+/* ---------- SECTION ---------- */
+.section{
+    background:#F8F8F8;
+    padding:90px 0 110px;
+    position:relative;
+    z-index:2;
+}
+.section.alt{background:#EBEBEB}
+.page-hero + .section{
+    border-radius:80px 80px 0 0;
+    margin-top:-80px;
+}
+.section .container{
+    width:92%;
+    max-width:1400px;
+}
+.section .eyebrow{
+    display:block;
+    color:var(--red);
+    font-size:13px;
+    font-weight:800;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+.heading{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    gap:25px;
+    margin-bottom:40px;
+}
+.heading h2,
+.copy h2,
+.article h2{
+    font-size:44px;
+    font-weight:800;
+    line-height:1.15;
+    color:#222;
+    margin:8px 0 14px;
+}
+.heading p{color:#555;line-height:1.7;max-width:640px}
+.text-link{
+    color:var(--red);
+    font-weight:800;
+    font-size:14px;
+    white-space:nowrap;
+}
+.text-link:hover{text-decoration:underline}
+
+/* ---------- GRID ---------- */
+.grid{display:grid;gap:30px}
+.grid.four{grid-template-columns:repeat(4,1fr)}
+.grid.three{grid-template-columns:repeat(3,1fr)}
+
+.split{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+.copy{line-height:1.9;color:#444;font-size:17px}
+.copy p{margin-bottom:14px}
+.image-panel{
+    border-radius:35px;
+    overflow:hidden;
+    min-height:420px;
+    background:var(--yellow);
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+}
+.image-panel img{height:100%;min-height:420px;object-fit:cover}
+
+/* ---------- การ์ดสินค้า / เมนู / หมวดหมู่ ในหน้าด้านใน ---------- */
+.grid .product-card,
+.grid .meal-card,
+.grid .category-card{color:#222}
+.grid .product-card img.icon{
+    width:auto;
+    max-width:55%;
+    height:110px;
+    align-self:center;
+    margin:70px auto 75px;
+}
+.grid .meal-card img{height:340px}
+.meal-card .ph{
+    height:340px;
+    background:var(--yellow);
+    display:grid;
+    place-items:center;
+}
+.meal-card .ph img,
+.detail-art .logo{
+    width:48%;
+    height:auto;
+    object-fit:contain;
+}
+.grid .category-card{min-height:330px}
+
+/* ---------- FILTERS ---------- */
+.filters{
+    display:flex;
+    flex-wrap:wrap;
+    gap:16px;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:42px;
+}
+.filters select{
+    background:transparent;
+    border:1px solid #777;
+    color:#222;
+    padding:11px 22px;
+    border-radius:999px;
+    font-size:15px;
+    font-family:inherit;
+    cursor:pointer;
+    outline:none;
+}
+.filters input{
+    background:#1F1F1F;
+    color:#fff;
+    padding:12px 24px;
+    border-radius:999px;
+    width:300px;
+    max-width:100%;
+    font-size:14px;
+    font-family:inherit;
+}
+.filters input::placeholder{color:rgba(255,255,255,.6)}
+.empty{
+    text-align:center;
+    color:#666;
+    padding:50px 0;
+    font-weight:600;
+}
+.note{font-size:13px;color:#777;line-height:1.7}
+
+/* ---------- BUTTONS ---------- */
+.cta{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    background:var(--red);
+    color:#fff !important;
+    border:2px solid var(--red);
+    padding:12px 25px;
+    border-radius:999px;
+    font-size:14px;
+    font-weight:800;
+    letter-spacing:.5px;
+    transition:.3s;
+    margin:0 6px 8px 0;
+}
+.cta:hover{background:#8b0e11;border-color:#8b0e11;transform:translateY(-3px)}
+.cta.outline{background:transparent;color:var(--red) !important}
+.cta.outline:hover{background:var(--red);color:#fff !important}
+
+/* ---------- BOXES ---------- */
+.article-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:30px}
+.article-box{
+    background:#fff;
+    border-radius:35px;
+    padding:40px;
+    line-height:1.8;
+    color:#444;
+    box-shadow:0 15px 35px rgba(0,0,0,.05);
+}
+.article-box h2,
+.article-box h3{
+    font-weight:800;
+    color:#222;
+    margin:0 0 12px;
+    font-size:24px;
+}
+.article-box a{color:var(--red);font-weight:700}
+.article-box a:hover{text-decoration:underline}
+.box-ico{
+    width:72px;
+    height:72px;
+    border-radius:50%;
+    background:var(--yellow);
+    display:grid;
+    place-items:center;
+    font-size:34px;
+    margin:0 0 20px;
+}
+.box-ico.big{width:96px;height:96px;font-size:46px;margin-bottom:28px}
+.article-box[style*="center"] .box-ico{margin-left:auto;margin-right:auto}
+
+.banner{
+    background:var(--yellow);
+    color:var(--dark);
+    border-radius:35px;
+    padding:44px 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:30px;
+}
+.banner h2{font-size:32px;font-weight:800;margin-bottom:8px;color:var(--dark)}
+.banner p{line-height:1.7;font-weight:500}
+
+/* ---------- DETAIL (สินค้า / เมนู) ---------- */
+.detail-layout{
+    display:grid;
+    grid-template-columns:.9fr 1.1fr;
+    gap:60px;
+    align-items:start;
+}
+.detail-art{
+    position:sticky;
+    top:120px;
+    min-height:480px;
+    border-radius:35px;
+    background:#fff;
+    display:grid;
+    place-items:center;
+    padding:40px;
+    box-shadow:0 15px 35px rgba(0,0,0,.05);
+}
+.detail-art img{max-height:420px;object-fit:contain}
+.detail-art.icon img{width:38%}
+.detail-art.ph{background:var(--yellow)}
+.detail-content h1{
+    font-size:46px;
+    font-weight:800;
+    line-height:1.15;
+    margin:10px 0 18px;
+    color:#222;
+}
+.detail-content h2{font-size:26px;font-weight:800;margin:30px 0 10px;color:#222}
+.detail-content p{line-height:1.9;color:#444;margin-bottom:12px}
+.spec{
+    display:grid;
+    grid-template-columns:190px 1fr;
+    gap:16px;
+    padding:16px 0;
+    border-bottom:1px solid #ddd;
+    font-size:15px;
+}
+.spec b{font-weight:800;color:#222}
+.spec span{color:#555}
+.method{padding-left:24px;line-height:2.1;color:#444;margin-bottom:16px}
+.detail-content .cta{margin-top:14px}
+
+/* ---------- ARTICLE / LEGAL ---------- */
+.article{
+    max-width:820px;
+    margin:0 auto;
+    line-height:2;
+    font-size:17px;
+    color:#444;
+}
+.article a{color:var(--red);font-weight:700}
+
+/* ---------- FAQ ---------- */
+.faq{max-width:900px;margin:0 auto}
+.faq details{
+    background:#fff;
+    border-radius:25px;
+    padding:24px 32px;
+    margin-bottom:16px;
+    box-shadow:0 15px 35px rgba(0,0,0,.05);
+}
+.faq summary{font-weight:800;cursor:pointer;font-size:17px;color:#222}
+.faq details[open] summary{color:var(--red)}
+.faq p{margin-top:12px;line-height:1.8;color:#555}
+
+/* ---------- FORM ---------- */
+.form{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+    background:#fff;
+    border-radius:35px;
+    padding:40px;
+    box-shadow:0 15px 35px rgba(0,0,0,.05);
+}
+.form label{font-weight:800;font-size:13px;color:#222}
+.form input,
+.form textarea{
+    display:block;
+    width:100%;
+    margin-top:8px;
+    border:1px solid #ddd;
+    border-radius:18px;
+    padding:13px 18px;
+    font-family:inherit;
+    font-size:15px;
+    outline:none;
+    background:#fafafa;
+}
+.form input:focus,
+.form textarea:focus{border-color:var(--red)}
+.form textarea{min-height:150px;resize:vertical}
+.form .full{grid-column:1 / -1}
+.form button.cta{margin:0}
+
+/* ---------- ลิงก์ใน footer ---------- */
+footer .footer-column h3 a:hover{color:var(--yellow)}
+.contact-info p a{color:#bbb}
+.contact-info p a:hover{color:var(--yellow)}
+
+/*====================================================
+    RESPONSIVE
+====================================================*/
+@media (max-width:1200px){
+    .grid.four{grid-template-columns:repeat(2,1fr)}
+    .grid.three{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:992px){
+    .page-title{font-size:46px}
+    .split,.detail-layout,.article-grid,.form{grid-template-columns:1fr}
+    .banner{flex-direction:column;align-items:flex-start}
+    .detail-art{position:static;min-height:320px}
+    .heading{flex-direction:column;align-items:flex-start}
+}
+@media (max-width:640px){
+    .grid.four,.grid.three{grid-template-columns:1fr}
+    .page-hero{padding:230px 0 110px}
+    .page-title{font-size:36px}
+    .spec{grid-template-columns:1fr;gap:4px}
+    .page-hero + .section{border-radius:50px 50px 0 0}
+}

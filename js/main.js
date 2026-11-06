@@ -16,6 +16,7 @@ let currentSlide = 0;
 let slideInterval;
 
 function showSlide(index) {
+    if (!slides.length) return; // หน้าด้านในไม่มี hero slider
     // ลบคลาส active ออกจากรูปและขีดทั้งหมดก่อน
     slides.forEach(slide => slide.classList.remove('active'));
     dots.forEach(dot => dot.classList.remove('active'));
@@ -46,8 +47,42 @@ dots.forEach((dot, index) => {
     });
 });
 
-// เปิดระบบตอนโหลดเว็บ
-startSlider();
+// เปิดระบบตอนโหลดเว็บ (เฉพาะหน้าที่มี hero slider)
+if (slides.length) startSlider();
+
+/* =========================================================
+   หน้าด้านใน: ค้นหา/กรองการ์ด + ฟอร์ม Partner (mailto)
+========================================================= */
+document.addEventListener('DOMContentLoaded', () => {
+    const search = document.querySelector('#searchCards');
+    const sel = document.querySelector('#filterCards');
+    if (search || sel) {
+        const filter = () => {
+            const term = (search?.value || '').toLowerCase().trim();
+            const cat = sel?.value || 'all';
+            let count = 0;
+            document.querySelectorAll('[data-card]').forEach(c => {
+                const show = (cat === 'all' || c.dataset.category === cat) && c.textContent.toLowerCase().includes(term);
+                c.style.display = show ? '' : 'none';
+                if (show) count++;
+            });
+            const empty = document.querySelector('#emptyResult');
+            if (empty) empty.hidden = count > 0;
+        };
+        search?.addEventListener('input', filter);
+        sel?.addEventListener('change', filter);
+        const params = new URLSearchParams(location.search);
+        if (sel && params.has('category')) { sel.value = params.get('category'); filter(); }
+    }
+
+    document.querySelector('#partnerForm')?.addEventListener('submit', e => {
+        e.preventDefault();
+        const f = new FormData(e.target);
+        const subject = '[AsianDO Partner] ' + (f.get('subject') || 'Enquiry');
+        const message = ['Name: ' + f.get('name'), 'Company: ' + f.get('company'), 'Email: ' + f.get('email'), '', 'Message: ' + f.get('message')].join('\n');
+        location.href = 'mailto:info@krsspicyfood.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(message);
+    });
+});
 
 document.addEventListener('DOMContentLoaded', () => {
     
